@@ -118,4 +118,16 @@ class OXTest {
         assertTrue(ox.checkWin(1, 1));
         assertTrue(ox.checkWin(2, 2));
     }
+
+    @Test
+    void checkWin7() {
+        OX ox = new OX();
+        ox.put(0,0);
+        ox.put(1,1);
+        ox.put(2,2);
+        assertEquals(" 012\n0X--\n1-X-\n2--X\n",ox.getTableString());
+        assertTrue(ox.checkWin(0, 0));
+        assertTrue(ox.checkWin(1, 1));
+        assertTrue(ox.checkWin(2, 2));
+    }
 }
